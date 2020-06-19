@@ -23,15 +23,26 @@ struct vertex {
 
 class Graph {
 public:
+	
+	//constructors
 	Graph() {}
+	//constructor for a file name
 	Graph(std::string);
+	//destructor
 	~Graph();
+	//function for adding edges
 	void addEdge(const std::string&, const std::string&);
+	//function for adding vertices
 	void addVertex(const std::string&);
+	//function for checking whether graph is connected or not
 	bool isConnected();
+	//function for checking whether graph is complete or not
 	bool iscomplete();
+	//function for finding out vertex connectivity
 	int vertexConnectivity();
+	//function for finding out local vertex connectivity
 	int locVertexCon(std::string, std::string);
+	//function for finding disjoint path between two vertices
 	std::pair<std::vector<vertex*>, bool> vertexDisjointPath(std::string, std::string);
 
 
@@ -67,13 +78,6 @@ Graph::Graph(std::string name) {
 	}
 }
 
-/*
-Graph::Graph(std::string filename) {
-
-
-
-}
-*/
 
 
 void Graph::addVertex(const std::string& v_name) {
